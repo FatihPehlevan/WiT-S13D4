@@ -17,11 +17,10 @@ public class Player {
         return healthPercentage;
     }
     public int loseHealth(int damage) {
-        healthPercentage =  healthPercentage - damage;
+        healthPercentage-=  damage;
         if (healthPercentage < 0) {
             System.out.println(name + " player has been knocked out of game");
             healthPercentage = 0;
-            return healthPercentage;
         }
         return healthPercentage;
     }
@@ -30,7 +29,6 @@ public class Player {
         healthPercentage+= healthPotion;
         if(healthPercentage > 100) {
             healthPercentage = 100;
-            return healthPercentage;
         }
         return healthPercentage;
     }
